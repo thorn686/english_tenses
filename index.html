@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master English Tenses</title>
+    <link rel="shortcut icon" href="/education.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg: #faf9f6;
+            --white: #ffffff;
+            --text: #1a1a2e;
+            --muted: #6b6b80;
+            --light: #f0eee8;
+            --border: #e8e4dc;
+            --p1: #2d6a4f;
+            --p1l: #d8f3dc;
+            --p1m: #74c69d;
+            --p2: #1565c0;
+            --p2l: #e3f2fd;
+            --p2m: #64b5f6;
+            --p3: #b5451b;
+            --p3l: #fbe9e7;
+            --p3m: #ff8a65;
+            --p4: #5c5c7a;
+            --p4l: #ede7f6;
+            --p4m: #9e9ec8;
+            --accent: #e8610a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        /* NAV */
+        
+        .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 249, 246, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            height: 56px;
+        }
+        
+        .nav-logo {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+        
+        .nav-logo span {
+            color: var(--accent);
+            font-style: italic;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text);
+        }
+        /* HERO */
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 7rem 2rem 5rem;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 60% at 15% 30%, rgba(45, 106, 79, 0.05) 0%, transparent 60%), radial-gradient(ellipse 60% 70% at 85% 70%, rgba(21, 101, 192, 0.05) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 50% 100%, rgba(232, 97, 10, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: #fff5ef;
+            border: 1px solid #fdd5b8;
+            padding: 5px 16px;
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.15s forwards;
+        }
+        
+        .hero h1 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.8rem, 7vw, 6rem);
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            max-width: 800px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.3s forwards;
+        }
+        
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+        
+        .hero-desc {
+            max-width: 560px;
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin: 1.8rem auto 3rem;
+            line-height: 1.8;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.45s forwards;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            animation: fadeUp 0.8s 0.6s forwards;
+        }
+        
+        .hstat {
+            padding: 1.5rem 2.5rem;
+            border-right: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .hstat:last-child {
+            border-right: none;
+        }
+        
+        .hstat-n {
+            font-family: 'Lora', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+        }
+        
+        .hstat-l {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+        /* SCHEDULE */
+        
+        .how-section {
+            background: var(--text);
+            color: #f0ede8;
+            padding: 3.5rem 2rem;
+        }
+        
+        .how-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        
+        .how-title {
+            font-family: 'Lora', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .how-title span {
+            color: var(--p1m);
+            font-style: italic;
+        }
+        
+        .sched-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .sstep {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 1.25rem 1.5rem;
+        }
+        
+        .sstep-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            color: var(--p1m);
+            margin-bottom: 6px;
+        }
+        
+        .sstep-task {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f0ede8;
+        }
+        
+        .sstep-dur {
+            font-size: 12px;
+            color: rgba(240, 237, 232, 0.5);
+            margin-top: 3px;
+        }
+        /* MAIN */
+        
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+        /* PHASE */
+        
+        .phase-hdr {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3.5rem 0 1rem;
+        }
+        
+        .phase-pill {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+        
+        .ph1 {
+            background: var(--p1l);
+            color: var(--p1);
+        }
+        
+        .ph2 {
+            background: var(--p2l);
+            color: var(--p2);
+        }
+        
+        .ph3 {
+            background: var(--p3l);
+            color: var(--p3);
+        }
+        
+        .ph4 {
+            background: var(--p4l);
+            color: var(--p4);
+        }
+        
+        .phase-rule {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        
+        .phase-sub {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+        /* CARD */
+        
+        .tcard {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: box-shadow 0.25s, border-color 0.25s;
+            cursor: pointer;
+        }
+        
+        .tcard:hover {
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+            border-color: #d8d2c8;
+        }
+        
+        .tcard.open {
+            border-color: #c8c2b4;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tcard-head {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+        }
+        
+        .tcard-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            background: var(--light);
+            border-radius: 6px;
+            padding: 3px 8px;
+            flex-shrink: 0;
+        }
+        
+        .tcard-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .tcard-name {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+        
+        .tcard-formula {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+        }
+        
+        .tcard-badge {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 100px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        
+        .b1 {
+            background: var(--p1l);
+            color: var(--p1);
+        }
+        
+        .b2 {
+            background: var(--p2l);
+            color: var(--p2);
+        }
+        
+        .b3 {
+            background: var(--p3l);
+            color: var(--p3);
+        }
+        
+        .b4 {
+            background: var(--p4l);
+            color: var(--p4);
+        }
+        
+        .tcard-chevron {
+            font-size: 20px;
+            color: var(--muted);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        
+        .tcard.open .tcard-chevron {
+            transform: rotate(90deg);
+        }
+        
+        .tcard-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .tcard.open .tcard-body {
+            max-height: 2600px;
+        }
+        
+        .tcard-inner {
+            border-top: 1px solid var(--border);
+        }
+        /* TABS */
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            padding: 0 1.5rem;
+            gap: 0;
+            overflow-x: auto;
+        }
+        
+        .tab-btn {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            padding: 12px 18px;
+            border: none;
+            background: none;
+            color: var(--muted);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
+            margin-bottom: -1px;
+        }
+        
+        .tab-btn.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        
+        .tab-pane {
+            display: none;
+            padding: 1.5rem;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        /* LEARN */
+        
+        .learn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media(max-width:620px) {
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .lg-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+        
+        .lg-use {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        
+        .kws {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        
+        .kw {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            padding: 3px 9px;
+            border-radius: 6px;
+            background: var(--light);
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
+        
+        .form-box {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 13px;
+            line-height: 2;
+        }
+        
+        .form-box .row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 3px;
+        }
+        
+        .form-box .flabel {
+            font-weight: 600;
+            color: var(--muted);
+            min-width: 90px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        
+        .form-box .fval {
+            color: var(--text);
+        }
+        
+        .form-box .fval b {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .examples-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .ex-item {
+            background: #fffdf9;
+            border: 1px solid #f0ebe0;
+            border-left: 3px solid var(--p1m);
+            border-radius: 0 10px 10px 0;
+            padding: 10px 14px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        
+        .ex-item b {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .ex-item .ex-tr {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 3px;
+            font-style: italic;
+        }
+        
+        .note-box {
+            margin-top: 14px;
+            background: #fffbf0;
+            border: 1px solid #f5e6bb;
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-size: 13px;
+            line-height: 1.75;
+            color: #6b5a2a;
+        }
+        
+        .note-box strong {
+            color: #8b6914;
+        }
+        /* READ */
+        
+        .reading-passage {
+            background: #fffdf9;
+            border: 1px solid #f0ebe0;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .reading-title {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        
+        .reading-text {
+            font-size: 14px;
+            line-height: 2.1;
+            color: var(--text);
+            font-family: 'Lora', serif;
+        }
+        
+        .reading-text mark {
+            background: #fff3cd;
+            border-radius: 3px;
+            padding: 0 2px;
+            color: var(--text);
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        .reading-qs {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 1rem;
+        }
+        
+        .reading-qs .rq-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+        
+        .rq-item {
+            font-size: 13px;
+            color: var(--text);
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .rq-item::before {
+            content: '?';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 12px;
+        }
+        /* EXERCISES */
+        
+        .exercise-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .ex-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .q-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .q-text {
+            color: var(--text);
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .q-opts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        
+        .q-opt {
+            font-size: 12px;
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--white);
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .q-opt:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .q-opt.correct {
+            background: var(--p1l);
+            border-color: var(--p1);
+            color: var(--p1);
+        }
+        
+        .q-opt.wrong {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #b91c1c;
+        }
+        
+        .q-feedback {
+            margin-top: 8px;
+            font-size: 12px;
+            border-radius: 6px;
+            padding: 7px 10px;
+            display: none;
+            line-height: 1.6;
+        }
+        
+        .q-feedback.show-ok {
+            display: block;
+            background: var(--p1l);
+            color: var(--p1);
+        }
+        
+        .q-feedback.show-err {
+            display: block;
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        .writing-prompt {
+            background: #fffdf9;
+            border: 1px solid #f0ebe0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+        }
+        
+        .wp-text {
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .wp-input {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 13px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            outline: none;
+            transition: border-color 0.2s;
+            resize: none;
+            min-height: 64px;
+        }
+        
+        .wp-input:focus {
+            border-color: var(--accent);
+        }
+        
+        .check-btn {
+            margin-top: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 7px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .check-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        /* PROGRESS */
+        
+        .progress-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .prog-title {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        
+        .prog-sub {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+        
+        .prog-bar-wrap {
+            background: var(--light);
+            border-radius: 100px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .prog-bar-fill {
+            height: 100%;
+            border-radius: 100px;
+            background: linear-gradient(90deg, var(--p1), #52b788);
+            transition: width 0.6s ease;
+        }
+        
+        .prog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 6px;
+        }
+        
+        .day-dot {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .day-dot:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .day-dot.done {
+            background: var(--p1l);
+            border-color: var(--p1m);
+            color: var(--p1);
+        }
+        
+        .day-dot .dtip {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text);
+            color: var(--white);
+            font-size: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 4px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .day-dot:hover .dtip {
+            display: block;
+        }
+        
+        footer {
+            background: var(--text);
+            color: rgba(240, 237, 232, 0.6);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer strong {
+            color: #f0ede8;
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.55s, transform 0.55s;
+        }
+        
+        .reveal.in {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav">
+        <div class="nav-logo">English<span>Tenses</span></div>
+        <div class="nav-links">
+            <a href="#tenses">All Tenses</a>
+            <a href="#progress">My Progress</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-eyebrow">Complete Beginner's Guide</div>
+        <h1>Learn Every English<br>Tense <em>Properly</em></h1>
+        <p class="hero-desc">12 tenses. Clear explanations. Real reading passages. Daily exercises. Your structured roadmap — just 45 minutes a day.</p>
+        <div class="hero-stats">
+            <div class="hstat">
+                <div class="hstat-n">12</div>
+                <div class="hstat-l">Tenses</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-n">45</div>
+                <div class="hstat-l">Min / Day</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-n">60</div>
+                <div class="hstat-l">Days</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-n">4</div>
+                <div class="hstat-l">Phases</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="how-section">
+        <div class="how-inner">
+            <div class="how-title">Your daily <span>45-minute</span> study plan</div>
+            <div class="sched-steps">
+                <div class="sstep">
+                    <div class="sstep-time">0:00 — 0:10</div>
+                    <div class="sstep-task">Review yesterday</div>
+                    <div class="sstep-dur">10 minutes</div>
+                </div>
+                <div class="sstep">
+                    <div class="sstep-time">0:10 — 0:30</div>
+                    <div class="sstep-task">Study the new tense</div>
+                    <div class="sstep-dur">20 minutes</div>
+                </div>
+                <div class="sstep">
+                    <div class="sstep-time">0:30 — 0:40</div>
+                    <div class="sstep-task">Read the passage</div>
+                    <div class="sstep-dur">10 minutes</div>
+                </div>
+                <div class="sstep">
+                    <div class="sstep-time">0:40 — 0:45</div>
+                    <div class="sstep-task">Do exercises</div>
+                    <div class="sstep-dur">5 minutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main" id="tenses">
+
+        <!-- PHASE 1 -->
+        <div class="phase-hdr reveal">
+            <div class="phase-pill ph1">Phase 1 — Foundation · Days 1–20</div>
+            <div class="phase-rule"></div>
+        </div>
+        <p class="phase-sub reveal">These 4 tenses cover 80% of everyday English. Master these first.</p>
+
+        <!-- 01 Present Simple -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">01</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Present Simple</div>
+                    <div class="tcard-formula">Subject + base verb &nbsp;(+&nbsp;s/es for he / she / it)</div>
+                </div>
+                <div class="tcard-badge b1">Days 1–5</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use Present Simple for:<br>• <strong>Habits &amp; routines</strong> — things you do regularly<br>• <strong>General facts</strong> — things always true<br>• <strong>Feelings / states</strong> — I love, I know, I believe<br>•
+                                    <strong>Schedules</strong> — The bus leaves at 7 am.</div>
+                                <div class="kws"><span class="kw">every day</span><span class="kw">always</span><span class="kw">usually</span><span class="kw">never</span><span class="kw">often</span><span class="kw">sometimes</span><span class="kw">on Mondays</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">Positive:</span><span class="fval">I/You/We/They <b>work</b> · He/She/It <b>works</b></span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">I <b>don't work</b> · She <b>doesn't work</b></span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Do</b> you work? · <b>Does</b> she work?</span></div>
+                                </div>
+                                <div class="note-box"><strong>⚠ Add -s/-es for he/she/it:</strong><br>go → <b>goes</b> &nbsp;|&nbsp; watch → <b>watches</b> &nbsp;|&nbsp; study → <b>studies</b></div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>drink</b> coffee every morning.
+                                        <div class="ex-tr">Habit — something I do every day</div>
+                                    </div>
+                                    <div class="ex-item">She <b>works</b> at a hospital.
+                                        <div class="ex-tr">He/She/It → add -s to the verb</div>
+                                    </div>
+                                    <div class="ex-item">The sun <b>rises</b> in the east.
+                                        <div class="ex-tr">General fact — always true</div>
+                                    </div>
+                                </div>
+                                <div class="note-box" style="margin-top:14px"><strong>More examples:</strong><br> He <b>doesn't eat</b> meat. (negative)<br>
+                                    <b>Does</b> she live near here? (question)<br> Water <b>boils</b> at 100°C. (fact)<br> They <b>play</b> football on weekends.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 A Day in the Life of Mia</div>
+                            <div class="reading-text">
+                                Mia <mark>lives</mark> in a small city near the coast. She <mark>works</mark> as a nurse at the local hospital. Every morning, she <mark>wakes up</mark> at 6 o'clock and <mark>drinks</mark> a glass of water. Then she <mark>makes</mark>                                breakfast — usually eggs and rice.<br><br> Mia <mark>takes</mark> the bus to work because she <mark>doesn't have</mark> a car. The bus <mark>leaves</mark> at 7:15 am. At the hospital, she <mark>helps</mark> patients and
+                                <mark>speaks</mark> to doctors. She <mark>loves</mark> her job.<br><br> After work, Mia usually <mark>goes</mark> for a walk in the park. She <mark>doesn't watch</mark> much TV. Instead, she <mark>reads</mark> books or
+                                <mark>calls</mark> her family. She <mark>goes</mark> to bed at 10 pm.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions — answer in full sentences</div>
+                                <div class="rq-item">Where does Mia live and what does she do for work?</div>
+                                <div class="rq-item">What time does she wake up, and what does she eat for breakfast?</div>
+                                <div class="rq-item">How does she get to work? Why doesn't she drive?</div>
+                                <div class="rq-item">What does she do in the evening instead of watching TV?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct answer</div>
+                            <div class="q-item">
+                                <div class="q-text">She ___ to school every day. (go)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','The correct answer is <b>goes</b>. With he/she/it, add -s or -es.')">go</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! She → goes. Remember: he/she/it always gets -s/-es.')">goes</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','The correct answer is <b>goes</b>.')">going</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','The correct answer is <b>goes</b>.')">gone</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">___ you speak English?</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>Do</b> for I/you/we/they questions.')">Does</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Do = for I/you/we/they. Does = for he/she/it.')">Do</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>Do</b>, not Are, for Present Simple questions.')">Are</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">My brother ___ like coffee. (negative)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>doesn\'t like</b> for he/she/it negative.')">don't like</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! doesn\'t + base verb (no -s after doesn\'t).')">doesn't like</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>doesn\'t like</b>.')">isn't like</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Write your own sentences</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write a sentence about something you do every morning. Use Present Simple.</div>
+                                <textarea class="wp-input" placeholder="Every morning, I ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write a sentence about a friend or family member. Use he/she + verb.</div>
+                                <textarea class="wp-input" placeholder="My sister / My friend ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02 Past Simple -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">02</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Past Simple</div>
+                    <div class="tcard-formula">Subject + verb-ed &nbsp;(or irregular past form)</div>
+                </div>
+                <div class="tcard-badge b1">Days 6–10</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use Past Simple for:<br>• A <strong>completed action</strong> at a specific time in the past<br>• A <strong>series of past events</strong> (She woke up, ate, and left)<br>• A <strong>past habit</strong> (I played football
+                                    as a child)</div>
+                                <div class="kws"><span class="kw">yesterday</span><span class="kw">last night</span><span class="kw">last week</span><span class="kw">in 2020</span><span class="kw">ago</span><span class="kw">in the morning</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">Regular:</span><span class="fval">work → <b>worked</b>, play → <b>played</b></span></div>
+                                    <div class="row"><span class="flabel">Irregular:</span><span class="fval">go → <b>went</b>, eat → <b>ate</b>, see → <b>saw</b></span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">I <b>didn't work</b> (same for ALL subjects)</span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Did</b> you work? &nbsp;<b>Did</b> she go?</span></div>
+                                </div>
+                                <div class="note-box"><strong>⚠ Common mistake:</strong><br>Wrong: She didn't <s>went</s>. ✗<br>Correct: She <b>didn't go</b>. ✓<br><br>After didn't/did, always use the BASE form of the verb.</div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>watched</b> a movie last night.
+                                        <div class="ex-tr">Regular verb: watch + ed = watched</div>
+                                    </div>
+                                    <div class="ex-item">She <b>went</b> to the market yesterday.
+                                        <div class="ex-tr">Irregular: go → went (must memorize!)</div>
+                                    </div>
+                                    <div class="ex-item">They <b>played</b> football on Sunday.
+                                        <div class="ex-tr">All subjects use the same past form</div>
+                                    </div>
+                                </div>
+                                <div class="note-box" style="margin-top:14px"><strong>Key irregular verbs:</strong><br> have→
+                                    <b>had</b> · come→<b>came</b> · take→<b>took</b><br> know→
+                                    <b>knew</b> · make→<b>made</b> · buy→<b>bought</b><br> speak→
+                                    <b>spoke</b> · give→<b>gave</b> · see→<b>saw</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 Kosal's Busy Weekend</div>
+                            <div class="reading-text">
+                                Last weekend, Kosal <mark>had</mark> a very busy schedule. On Saturday morning, he <mark>woke up</mark> early and <mark>went</mark> to the market with his mother. They <mark>bought</mark> fresh vegetables and fruit. Then
+                                they <mark>came</mark> home and <mark>cooked</mark> lunch together.<br><br> In the afternoon, Kosal <mark>met</mark> his friends at the park. They <mark>played</mark> football for two hours. After the game, they <mark>sat</mark>                                under a tree and <mark>talked</mark> about their week. Kosal <mark>told</mark> them a funny story and everyone <mark>laughed</mark>.<br><br> On Sunday, Kosal <mark>didn't go</mark> out. He <mark>stayed</mark> home and <mark>studied</mark>                                for his English exam. He <mark>read</mark> his textbook for three hours. At night, he <mark>watched</mark> an English movie to practise listening.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">Where did Kosal go on Saturday morning, and who did he go with?</div>
+                                <div class="rq-item">What did he do with his friends in the afternoon?</div>
+                                <div class="rq-item">Why did he stay home on Sunday?</div>
+                                <div class="rq-item">Find 5 irregular past verbs in the story and write their base forms.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct form</div>
+                            <div class="q-item">
+                                <div class="q-text">Yesterday, she ___ to the supermarket. (go)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use the irregular past: go → <b>went</b>.')">go</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Goed\' does not exist. go → <b>went</b> is irregular.')">goed</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! go → went (irregular past form).')">went</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Goes\' is present, not past.')">goes</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">He ___ breakfast this morning. (negative / eat)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','After didn\'t, use BASE verb: <b>didn\'t eat</b>.')">didn't ate</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! didn\'t + BASE verb. Never use past form after didn\'t.')">didn't eat</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>didn\'t eat</b>.')">not ate</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">___ you watch the game last night?</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>Did</b> for all subjects in past questions.')">Do</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Does\' is present tense.')">Does</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Did is used for ALL subjects in Past Simple questions.')">Did</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write 2 sentences about what you did yesterday. Use Past Simple verbs.</div>
+                                <textarea class="wp-input" placeholder="Yesterday, I ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 Present Continuous -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">03</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Present Continuous</div>
+                    <div class="tcard-formula">Subject + am / is / are + verb-ing</div>
+                </div>
+                <div class="tcard-badge b1">Days 11–15</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use Present Continuous for:<br>• Actions happening <strong>right now</strong>, at this moment<br>• <strong>Temporary situations</strong> around now<br>• <strong>Arranged future plans</strong> — I am meeting her tomorrow</div>
+                                <div class="kws"><span class="kw">right now</span><span class="kw">at the moment</span><span class="kw">currently</span><span class="kw">this week</span><span class="kw">today</span><span class="kw">Look!</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">I:</span><span class="fval">I <b>am working</b></span></div>
+                                    <div class="row"><span class="flabel">He/She/It:</span><span class="fval">She <b>is working</b></span></div>
+                                    <div class="row"><span class="flabel">We/You/They:</span><span class="fval">They <b>are working</b></span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">I <b>am not working</b> · She <b>isn't working</b></span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Are</b> you working? · <b>Is</b> she working?</span></div>
+                                </div>
+                                <div class="note-box"><strong>⚠ Spelling rules for -ing:</strong><br> swim → <b>swimming</b> (double consonant after short vowel)<br> make → <b>making</b> (drop silent -e, then add -ing)<br> study → <b>studying</b> (just add -ing normally)
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>am eating</b> lunch right now.
+                                        <div class="ex-tr">Happening at this exact moment</div>
+                                    </div>
+                                    <div class="ex-item">She <b>is studying</b> English this week.
+                                        <div class="ex-tr">Temporary activity around this period</div>
+                                    </div>
+                                    <div class="ex-item">They <b>are building</b> a new house.
+                                        <div class="ex-tr">Ongoing situation at the moment</div>
+                                    </div>
+                                </div>
+                                <div class="note-box" style="margin-top:14px"><strong>Simple vs Continuous:</strong><br> I <b>drink</b> coffee. → habit, every day ✓<br> I <b>am drinking</b> coffee. → right now ✓<br><br> She <b>works</b> at a hospital. → her permanent job ✓<br> She <b>is working</b>                                    now. → at this moment ✓
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 A Busy Afternoon at the Café</div>
+                            <div class="reading-text">
+                                It is 3 o'clock in the afternoon. The café is full of people. A woman in the corner <mark>is reading</mark> a book and <mark>is sipping</mark> iced coffee. Two students near the window <mark>are doing</mark> their homework.
+                                One of them <mark>is writing</mark> notes while the other <mark>is checking</mark> his phone.<br><br> Behind the counter, the barista <mark>is making</mark> a latte. She <mark>is listening</mark> to music with her headphones.
+                                Her colleague <mark>is cleaning</mark> the tables near the door. A child near the entrance <mark>is eating</mark> a piece of cake and <mark>is laughing</mark> at something funny.<br><br> Outside, it <mark>is raining</mark>                                lightly. People <mark>are walking</mark> quickly with umbrellas. A man <mark>is standing</mark> under the café awning, <mark>waiting</mark> for a taxi. Inside, everyone <mark>is staying</mark> warm and enjoying the afternoon.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">What is the woman in the corner doing?</div>
+                                <div class="rq-item">What are the two students doing near the window?</div>
+                                <div class="rq-item">What is the weather like outside the café?</div>
+                                <div class="rq-item">Challenge: Find and list ALL the Present Continuous verbs in the passage.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct form</div>
+                            <div class="q-item">
+                                <div class="q-text">Look! The children ___ in the garden right now.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use Present Continuous for right now: <b>are playing</b>.')">play</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! are + playing — they (plural) + right now.')">are playing</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','<b>is</b> is for he/she/it singular. Children = they → are.')">is playing</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">I can't talk right now. I ___ dinner.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! I + am + cooking. Action at this moment.')">am cooking</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Cook\' is Present Simple (habit), not right now.')">cook</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>am</b> (not is) with I.')">is cooking</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Look around you right now. Write 2 sentences about what you or someone near you is doing.</div>
+                                <textarea class="wp-input" placeholder="Right now, I am ... / My friend is ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 Future Simple -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">04</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Future Simple (will)</div>
+                    <div class="tcard-formula">Subject + will + base verb</div>
+                </div>
+                <div class="tcard-badge b1">Days 16–20</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use Future Simple (will) for:<br>• <strong>Spontaneous decisions</strong> — decided at this moment<br>• <strong>Predictions</strong> — I think it will rain tonight<br>• <strong>Promises &amp; offers</strong> — I will help
+                                    you
+                                    <br>• <strong>Future facts</strong> — She will be 30 next year</div>
+                                <div class="kws"><span class="kw">tomorrow</span><span class="kw">next week</span><span class="kw">soon</span><span class="kw">I think</span><span class="kw">probably</span><span class="kw">in the future</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">Positive:</span><span class="fval">I/She/They <b>will work</b> (same for ALL subjects)</span></div>
+                                    <div class="row"><span class="flabel">Short form:</span><span class="fval">I'll · She'll · They'll work</span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">I <b>will not / won't</b> work</span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Will</b> you work? &nbsp;<b>Will</b> she come?</span></div>
+                                </div>
+                                <div class="note-box"><strong>will vs going to:</strong><br>
+                                    <b>will</b> → decided RIGHT NOW (spontaneous)<br> "The phone is ringing — I'll get it!" ✓<br><br>
+                                    <b>going to</b> → planned BEFORE the moment<br> "I'm going to visit my parents this weekend." ✓
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>will call</b> you tomorrow.
+                                        <div class="ex-tr">Promise made at this moment</div>
+                                    </div>
+                                    <div class="ex-item">It <b>will rain</b> tonight, I think.
+                                        <div class="ex-tr">Prediction about the future</div>
+                                    </div>
+                                    <div class="ex-item">She <b>will help</b> you with that.
+                                        <div class="ex-tr">Spontaneous offer / decision</div>
+                                    </div>
+                                </div>
+                                <div class="note-box" style="margin-top:14px"><strong>More examples:</strong><br> A: There's no milk. B: I'<b>ll get</b> some! (spontaneous) ✓<br> He <b>won't come</b> to the party. (negative) ✓<br>
+                                    <b>Will</b> you be at school tomorrow? (question) ✓<br> I think prices <b>will rise</b> next year. (prediction) ✓
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 A Letter to My Future Self</div>
+                            <div class="reading-text">
+                                Dear Future Me,<br><br> I hope you are well. By the time you read this, things <mark>will be</mark> very different. I believe you <mark>will speak</mark> English fluently. You <mark>will have</mark> a good job, and you
+                                <mark>will live</mark> in a comfortable home.<br><br> I think technology <mark>will change</mark> a lot. Cars <mark>will be</mark> electric. Many people <mark>will work</mark> from home. I also think that learning apps
+                                <mark>will be</mark> even better — maybe you <mark>won't need</mark> a teacher at all!<br><br> But some things <mark>will not change</mark>. People <mark>will still love</mark> their families. They <mark>will still eat</mark>                                together, laugh together, and help each other. I think kindness <mark>will always be</mark> important.<br><br> I hope you <mark>will be</mark> happy. I <mark>will work</mark> hard now so that your life <mark>will be</mark>                                easier. With love, Past You.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">What does the writer hope for their future English skills?</div>
+                                <div class="rq-item">What changes does the writer predict about technology and work?</div>
+                                <div class="rq-item">What things does the writer believe will NOT change?</div>
+                                <div class="rq-item">Count all the "will" and "won't" forms in the letter. How many are there?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct answer</div>
+                            <div class="q-item">
+                                <div class="q-text">A: I'm thirsty. B: I ___ get you some water.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Spontaneous decision made right now = will.')">will</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>will</b> for spontaneous decisions. Going to = planned earlier.')">am going to</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Would\' is for conditional, not simple future.')">would</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">I don't think it ___ rain today. The sky is clear.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>won\'t</b> = will not. This is a prediction.')">isn't going to</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! won\'t = will not. Negative prediction.')">won't</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','\'Doesn\'t\' is Present Simple, not future.')">doesn't</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write 2 predictions about your life in 5 years. Use "I think I will..." and "I probably won't..."</div>
+                                <textarea class="wp-input" placeholder="I think I will ... / I probably won't ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase-hdr reveal" style="margin-top:2rem">
+            <div class="phase-pill ph2">Phase 2 — Building Up · Days 21–35</div>
+            <div class="phase-rule"></div>
+        </div>
+        <p class="phase-sub reveal">Very common in conversation — you will hear and use these every day.</p>
+
+        <!-- 05 Going to -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">05</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Future with "Going to"</div>
+                    <div class="tcard-formula">Subject + am / is / are + going to + base verb</div>
+                </div>
+                <div class="tcard-badge b2">Days 21–23</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use "going to" for:<br>• <strong>Plans decided before</strong> this moment<br>• <strong>Evidence-based predictions</strong> — you can see something is about to happen right now</div>
+                                <div class="kws"><span class="kw">this weekend</span><span class="kw">next month</span><span class="kw">soon</span><span class="kw">Look!</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">I:</span><span class="fval">I <b>am going to travel</b></span></div>
+                                    <div class="row"><span class="flabel">He/She:</span><span class="fval">She <b>is going to study</b></span></div>
+                                    <div class="row"><span class="flabel">We/They:</span><span class="fval">They <b>are going to move</b></span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>am going to visit</b> my parents this weekend.
+                                        <div class="ex-tr">Already planned before this conversation</div>
+                                    </div>
+                                    <div class="ex-item">Look at those clouds — it <b>is going to rain</b>.
+                                        <div class="ex-tr">You can see the evidence right now</div>
+                                    </div>
+                                    <div class="ex-item">We <b>are going to move</b> to a new apartment.
+                                        <div class="ex-tr">Decision made before speaking</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 Srey's Big Plans</div>
+                            <div class="reading-text">
+                                Srey <mark>is going to have</mark> a very busy month. Next week, she <mark>is going to start</mark> a new English course at a language school downtown. She <mark>is going to attend</mark> classes three times a week in the
+                                evenings.
+                                <br><br> Her family <mark>is going to travel</mark> to the province next weekend to visit their grandparents. They <mark>are going to stay</mark> there for three days. Her brother <mark>is going to drive</mark> the car
+                                because their father is not feeling well.<br><br> At work, Srey <mark>is going to give</mark> a presentation next Friday. She <mark>is going to prepare</mark> the slides this week. Her manager told her the company
+                                <mark>is going to hire</mark> two new staff members next month, which means Srey <mark>is going to be</mark> less busy soon.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">What course is Srey going to start, and how often will she attend?</div>
+                                <div class="rq-item">Where is the family going to travel, and why is her father not driving?</div>
+                                <div class="rq-item">What is Srey going to do at work next Friday?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Quick quiz</div>
+                            <div class="q-item">
+                                <div class="q-text">Look! That glass ___ fall off the table!</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Visible evidence right now = going to.')">is going to</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>going to</b> when you can already see the evidence.')">will</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','This is a future prediction, not a habit.')">falls</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write 3 sentences about your real plans for next week using "going to".</div>
+                                <textarea class="wp-input" placeholder="Next week, I am going to ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 06 Past Continuous -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">06</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Past Continuous</div>
+                    <div class="tcard-formula">Subject + was / were + verb-ing</div>
+                </div>
+                <div class="tcard-badge b2">Days 24–27</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">An action that was <strong>in progress</strong> at a specific moment in the past. Often pairs with Past Simple:<br><br> I <b>was sleeping</b> (continuous) when the alarm <b>rang</b> (simple).
+                                </div>
+                                <div class="kws"><span class="kw">when</span><span class="kw">while</span><span class="kw">at 8 pm</span><span class="kw">at that time</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">I/He/She/It:</span><span class="fval">I <b>was working</b></span></div>
+                                    <div class="row"><span class="flabel">We/You/They:</span><span class="fval">They <b>were working</b></span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">She <b>wasn't sleeping</b></span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Were</b> you sleeping?</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>was sleeping</b> when you called.
+                                        <div class="ex-tr">In progress + interrupted by a Past Simple event</div>
+                                    </div>
+                                    <div class="ex-item">They <b>were watching</b> TV at 8 pm last night.
+                                        <div class="ex-tr">In progress at a specific past time</div>
+                                    </div>
+                                    <div class="ex-item">While she <b>was cooking</b>, the fire started.
+                                        <div class="ex-tr">Two events happening around the same past time</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 The Power Cut</div>
+                            <div class="reading-text">
+                                Last Tuesday evening, the electricity suddenly went out across the neighbourhood. At that moment, many people <mark>were doing</mark> different things. In house number 12, a family <mark>was eating</mark> dinner when all
+                                the lights went off. The mother <mark>was cutting</mark> vegetables and the children <mark>were laughing</mark> at something on TV.<br><br> Next door, a student <mark>was studying</mark> for an important exam when his laptop
+                                screen went dark. He <mark>wasn't sleeping</mark> — he <mark>was reading</mark> his notes very carefully. Across the street, two neighbours <mark>were talking</mark> outside when they heard a loud sound from the power station.<br><br>                                It took two hours for the power to return. While everyone <mark>was waiting</mark> in the dark, they found candles and told stories to each other. It was actually a lovely evening in the end.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">What was the family in house 12 doing when the lights went off?</div>
+                                <div class="rq-item">Was the student sleeping? What was he actually doing?</div>
+                                <div class="rq-item">What did people do while they were waiting for the power to return?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct form</div>
+                            <div class="q-item">
+                                <div class="q-text">She ___ a shower when the phone rang.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','The shower was in progress before the phone rang → <b>was taking</b>.')">took</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! In progress (was taking) + interrupted (rang).')">was taking</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','<b>were</b> is for we/you/they. She → was.')">were taking</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">What were you doing last night at 9 pm? Write 2 sentences using Past Continuous.</div>
+                                <textarea class="wp-input" placeholder="Last night at 9 pm, I was ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 07 Present Perfect -->
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">07</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Present Perfect</div>
+                    <div class="tcard-formula">Subject + have / has + past participle</div>
+                </div>
+                <div class="tcard-badge b2">Days 28–35</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button>
+                        <button class="tab-btn" onclick="switchTab(event,'read')">Reading</button>
+                        <button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button>
+                    </div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">Use Present Perfect for:<br>• <strong>Life experiences</strong> — no specific time mentioned<br>• <strong>Recent past with a present result</strong><br>• Actions starting in the past and <strong>continuing now</strong></div>
+                                <div class="kws"><span class="kw">already</span><span class="kw">just</span><span class="kw">yet</span><span class="kw">ever</span><span class="kw">never</span><span class="kw">before</span><span class="kw">since</span><span class="kw">for</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">I/You/We:</span><span class="fval">I <b>have visited</b> (I've visited)</span></div>
+                                    <div class="row"><span class="flabel">He/She/It:</span><span class="fval">She <b>has finished</b> (She's finished)</span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">I <b>haven't eaten</b> · She <b>hasn't come</b></span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Have</b> you ever been there?</span></div>
+                                </div>
+                                <div class="note-box"><strong>Perfect vs Past Simple:</strong><br> I <b>have visited</b> Bangkok. (experience, no time given) ✓<br> I <b>visited</b> Bangkok <b>in 2019</b>. (specific time) ✓<br><br> She <b>has just eaten</b>. (result: she's
+                                    full now) ✓<br> She <b>ate</b> an hour ago. (finished, no connection to now) ✓
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>have visited</b> Bangkok before.
+                                        <div class="ex-tr">Life experience — we don't say when</div>
+                                    </div>
+                                    <div class="ex-item">She <b>has just finished</b> her homework.
+                                        <div class="ex-tr">"just" = very recently, result = she's free now</div>
+                                    </div>
+                                    <div class="ex-item">They <b>have never eaten</b> sushi.
+                                        <div class="ex-tr">"never" = zero times in their whole life</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="read">
+                        <div class="reading-passage">
+                            <div class="reading-title">📖 A World Traveller's Story</div>
+                            <div class="reading-text">
+                                My uncle is an adventurer. In his life, he <mark>has visited</mark> more than 40 countries. He <mark>has climbed</mark> mountains in Nepal, <mark>has swum</mark> in the Great Barrier Reef, and <mark>has eaten</mark> foods
+                                that most people <mark>have never tried</mark>.<br><br> He <mark>has lived</mark> in three different countries — Thailand, Spain, and Canada. He <mark>has learned</mark> four languages. I <mark>have always admired</mark>                                him because he <mark>has never been</mark> afraid to try new things.<br><br> This year, he <mark>has already been</mark> to Japan and Vietnam. He <mark>has just returned</mark> from a trip to Mongolia. He told me that he
+                                <mark>hasn't visited</mark> South America yet — but he <mark>has already planned</mark> a trip there for next year.
+                            </div>
+                            <div class="reading-qs">
+                                <div class="rq-title">Comprehension Questions</div>
+                                <div class="rq-item">How many countries has the uncle visited in his life?</div>
+                                <div class="rq-item">Which three countries has he lived in?</div>
+                                <div class="rq-item">Which continent hasn't he been to yet?</div>
+                                <div class="rq-item">Find 3 examples of "just/already/yet/never/ever" in the passage.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part A — Choose the correct answer</div>
+                            <div class="q-item">
+                                <div class="q-text">I ___ to Japan. It was amazing! (no specific time)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','No specific time = Present Perfect. Use <b>have been</b>.')">went</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Life experience, no time stated = have/has + participle.')">have been</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>have</b> (not has) with I.')">has been</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                            <div class="q-item">
+                                <div class="q-text">She ___ her keys. She can't open the door now.</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','The result affects now → Present Perfect: <b>has lost</b>.')">lost</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>has</b> (not have) for she.')">have lost</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Past action with present result = has + past participle.')">has lost</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Part B — Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write 3 sentences about your life experiences. Use "I have..." and "I have never..."</div>
+                                <textarea class="wp-input" placeholder="I have ... / I have never ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-hdr reveal" style="margin-top:2rem">
+            <div class="phase-pill ph3">Phase 3 — Intermediate · Days 36–50</div>
+            <div class="phase-rule"></div>
+        </div>
+        <p class="phase-sub reveal">For richer, more natural, fluent English.</p>
+
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">08</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Present Perfect Continuous</div>
+                    <div class="tcard-formula">Subject + have / has been + verb-ing</div>
+                </div>
+                <div class="tcard-badge b3">Days 36–39</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs"><button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button><button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button></div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">An action that <strong>started in the past and is still happening now</strong>. The focus is on the <em>duration</em> — how long it has been happening.</div>
+                                <div class="kws"><span class="kw">for 2 hours</span><span class="kw">since morning</span><span class="kw">all day</span><span class="kw">lately</span><span class="kw">recently</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">I/You/We:</span><span class="fval">I <b>have been studying</b></span></div>
+                                    <div class="row"><span class="flabel">He/She/It:</span><span class="fval">She <b>has been working</b></span></div>
+                                </div>
+                                <div class="note-box"><strong>Perfect vs Perfect Continuous:</strong><br> I <b>have read</b> 3 chapters. → result, how many ✓<br> I <b>have been reading</b> for 2 hours. → duration, how long ✓
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">I <b>have been studying</b> English for 2 months.
+                                        <div class="ex-tr">Started 2 months ago, still continuing now</div>
+                                    </div>
+                                    <div class="ex-item">She <b>has been working</b> here since 2020.
+                                        <div class="ex-tr">"since" = from a specific point in time</div>
+                                    </div>
+                                    <div class="ex-item">It <b>has been raining</b> all day.
+                                        <div class="ex-tr">Started this morning, still raining now</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Quick quiz</div>
+                            <div class="q-item">
+                                <div class="q-text">He looks tired. He ___ all night. (study)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Focus on duration up to now: <b>has been studying</b>.')">studied</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! has been + studying = ongoing duration until now.')">has been studying</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use <b>has</b> (not have) for he.')">have been studying</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write 2 sentences using "have/has been + -ing" about something you've been doing lately. Include "for" or "since".</div>
+                                <textarea class="wp-input" placeholder="I have been ... for / since ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">09</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Past Perfect</div>
+                    <div class="tcard-formula">Subject + had + past participle</div>
+                </div>
+                <div class="tcard-badge b3">Days 40–43</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs"><button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button><button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button></div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">An action completed <strong>BEFORE another past action</strong>. Use it to show which event happened first when telling a past story.</div>
+                                <div class="kws"><span class="kw">already</span><span class="kw">before</span><span class="kw">by the time</span><span class="kw">after</span><span class="kw">when</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">All subjects:</span><span class="fval">I / She / They <b>had finished</b></span></div>
+                                    <div class="row"><span class="flabel">Negative:</span><span class="fval">She <b>hadn't eaten</b></span></div>
+                                    <div class="row"><span class="flabel">Question:</span><span class="fval"><b>Had</b> you seen it before?</span></div>
+                                </div>
+                                <div class="note-box"><strong>Think of it as a timeline:</strong><br> ← Earlier &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Later →<br>
+                                    <b>had left</b> &nbsp;&nbsp;→&nbsp;&nbsp; I arrived<br><br> When I <b>arrived</b>, she <b>had already left</b>.<br> (she left FIRST, then I arrived SECOND)
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">When I arrived, she <b>had already left</b>.
+                                        <div class="ex-tr">She left FIRST → I arrived SECOND</div>
+                                    </div>
+                                    <div class="ex-item">He ate a lot because he <b>hadn't eaten</b> all day.
+                                        <div class="ex-tr">Not eating was earlier; eating was later</div>
+                                    </div>
+                                    <div class="ex-item">I <b>had never seen</b> snow before I went to Korea.
+                                        <div class="ex-tr">Zero experiences before a past moment in time</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Quick quiz</div>
+                            <div class="q-item">
+                                <div class="q-text">By the time the film started, we ___ our seats. (find)</div>
+                                <div class="q-opts">
+                                    <span class="q-opt" onclick="answer(this,'wrong','Completed before another past action = <b>had found</b>.')">found</span>
+                                    <span class="q-opt" onclick="answer(this,'correct','✓ Correct! Completed BEFORE \'the film started\'.')">had found</span>
+                                    <span class="q-opt" onclick="answer(this,'wrong','Use past perfect here, not present perfect.')">have found</span>
+                                </div>
+                                <div class="q-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">Write a sentence using "When I arrived / got home, I had already..."</div>
+                                <textarea class="wp-input" placeholder="When I got home, I had already ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">10</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Future Continuous</div>
+                    <div class="tcard-formula">Subject + will be + verb-ing</div>
+                </div>
+                <div class="tcard-badge b3">Days 44–47</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs"><button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button><button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button></div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">An action that <strong>will be in progress</strong> at a specific moment in the future. Think of it as "Present Continuous, but in the future."</div>
+                                <div class="kws"><span class="kw">at 8 pm tonight</span><span class="kw">this time tomorrow</span><span class="kw">next week at this time</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">All subjects:</span><span class="fval">I / She / They <b>will be working</b></span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">At 8 pm tonight, I <b>will be eating</b> dinner.
+                                        <div class="ex-tr">In progress at that specific future time</div>
+                                    </div>
+                                    <div class="ex-item">This time next week, she <b>will be flying</b> to Japan.
+                                        <div class="ex-tr">In the middle of that action next week</div>
+                                    </div>
+                                    <div class="ex-item">They <b>will be working</b> when you arrive.
+                                        <div class="ex-tr">Ongoing when another future event happens</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">What will you be doing this time tomorrow? Write 2 sentences using Future Continuous.</div>
+                                <textarea class="wp-input" placeholder="This time tomorrow, I will be ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">11</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Future Perfect</div>
+                    <div class="tcard-formula">Subject + will have + past participle</div>
+                </div>
+                <div class="tcard-badge b3">Days 48–50</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs"><button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button><button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button></div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use">An action that <strong>will be completed BEFORE</strong> a specific time in the future. You are looking back from the future at something that will be done.</div>
+                                <div class="kws"><span class="kw">by tomorrow</span><span class="kw">by next year</span><span class="kw">by the time</span><span class="kw">before</span></div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">All subjects:</span><span class="fval">I / She <b>will have finished</b></span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="lg-label">3 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">By 10 pm, I <b>will have finished</b> this book.
+                                        <div class="ex-tr">Finished BEFORE 10 pm (a future deadline)</div>
+                                    </div>
+                                    <div class="ex-item">She <b>will have graduated</b> by next year.
+                                        <div class="ex-tr">Graduation completed before a future point</div>
+                                    </div>
+                                    <div class="ex-item">By the time he arrives, we <b>will have eaten</b>.
+                                        <div class="ex-tr">Eating will be done before his arrival</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Writing practice</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">What will you have done by the end of this year? Write 2 sentences using "by the end of this year, I will have..."</div>
+                                <textarea class="wp-input" placeholder="By the end of this year, I will have ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="phase-hdr reveal" style="margin-top:2rem">
+            <div class="phase-pill ph4">Phase 4 — Advanced · Days 51–60</div>
+            <div class="phase-rule"></div>
+        </div>
+        <p class="phase-sub reveal">Rare but completes your full mastery of all 12 English tenses.</p>
+
+        <div class="tcard reveal" onclick="toggleCard(this)">
+            <div class="tcard-head">
+                <div class="tcard-num">12</div>
+                <div class="tcard-info">
+                    <div class="tcard-name">Past &amp; Future Perfect Continuous</div>
+                    <div class="tcard-formula">had been + ing &nbsp;·&nbsp; will have been + ing</div>
+                </div>
+                <div class="tcard-badge b4">Days 51–60</div>
+                <div class="tcard-chevron">›</div>
+            </div>
+            <div class="tcard-body">
+                <div class="tcard-inner">
+                    <div class="tabs"><button class="tab-btn active" onclick="switchTab(event,'learn')">Learn</button><button class="tab-btn" onclick="switchTab(event,'exercise')">Exercises</button></div>
+                    <div class="tab-pane active" data-tab="learn">
+                        <div class="learn-grid">
+                            <div>
+                                <div class="lg-label">When to use it</div>
+                                <div class="lg-use"><strong>Past Perfect Continuous:</strong><br> Duration of an action that was ongoing before a past moment.<br><br>
+                                    <strong>Future Perfect Continuous:</strong><br> Duration of an action that will be ongoing until a future point.
+                                </div>
+                                <div class="form-box">
+                                    <div class="row"><span class="flabel">Past Perf. C:</span><span class="fval">I <b>had been waiting</b> for 2 hours</span></div>
+                                    <div class="row"><span class="flabel">Future Perf. C:</span><span class="fval">I <b>will have been studying</b> for 6 months</span></div>
+                                </div>
+                                <div class="note-box"><strong>These tenses are rare</strong> in everyday conversation. Don't worry if they feel difficult — focus on mastering the simpler tenses first and you will naturally use these as you advance.</div>
+                            </div>
+                            <div>
+                                <div class="lg-label">2 clear examples</div>
+                                <div class="examples-list">
+                                    <div class="ex-item">She <b>had been waiting</b> for 2 hours before he arrived.
+                                        <div class="ex-tr">Duration of waiting before a past event</div>
+                                    </div>
+                                    <div class="ex-item">By June, I <b>will have been studying</b> English for 6 months.
+                                        <div class="ex-tr">Duration of studying up to a future point</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" data-tab="exercise">
+                        <div class="exercise-section">
+                            <div class="ex-section-title">Final writing challenge</div>
+                            <div class="writing-prompt">
+                                <div class="wp-text">By the time you finish this 60-day course, how long will you have been studying English? Write a sentence.</div>
+                                <textarea class="wp-input" placeholder="By the time I finish this course, I will have been studying English for ..."></textarea>
+                                <button class="check-btn" onclick="checkWriting(this)">Submit for review ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-section reveal" id="progress">
+            <div class="prog-title">Your 60-Day Journey</div>
+            <p class="prog-sub">Click each day to mark it complete. Your progress is saved in your browser automatically.</p>
+            <div class="prog-bar-wrap">
+                <div class="prog-bar-fill" id="pbar" style="width:0%"></div>
+            </div>
+            <div class="prog-meta"><span id="prog-done">0 days completed</span><span id="prog-pct">0%</span></div>
+            <div class="days-grid" id="days-grid"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Every great English speaker started exactly where you are now.<br>
+            <strong>One tense. One day. One step at a time.</strong></p>
+    </footer>
+
+    <script>
+        function toggleCard(card) {
+            const isOpen = card.classList.contains('open');
+            document.querySelectorAll('.tcard.open').forEach(c => c.classList.remove('open'));
+            if (!isOpen) {
+                card.classList.add('open');
+                setTimeout(() => card.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                }), 100);
+            }
+        }
+
+        function switchTab(e, tab) {
+            e.stopPropagation();
+            const inner = e.target.closest('.tcard-inner');
+            inner.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            inner.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            e.target.classList.add('active');
+            inner.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+        }
+
+        function answer(opt, result, msg) {
+            const qi = opt.closest('.q-item');
+            if (qi.dataset.answered) return;
+            qi.dataset.answered = '1';
+            qi.querySelectorAll('.q-opt').forEach(o => {
+                o.style.pointerEvents = 'none';
+            });
+            const fb = qi.querySelector('.q-feedback');
+            if (result === 'correct') {
+                opt.classList.add('correct');
+                fb.innerHTML = msg;
+                fb.className = 'q-feedback show-ok';
+            } else {
+                opt.classList.add('wrong');
+                fb.innerHTML = msg;
+                fb.className = 'q-feedback show-err';
+            }
+        }
+
+        function checkWriting(btn) {
+            const wrap = btn.closest('.writing-prompt');
+            const ta = wrap.querySelector('textarea');
+            if (!ta.value.trim()) {
+                ta.style.borderColor = '#ef4444';
+                return;
+            }
+            ta.style.borderColor = '#2d6a4f';
+            btn.textContent = 'Submitted! ✓ Ask your teacher to review.';
+            btn.style.color = '#2d6a4f';
+            btn.style.borderColor = '#74c69d';
+            btn.disabled = true;
+        }
+        const revObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    revObs.unobserve(e.target);
+                }
+            });
+        }, {
+            threshold: 0.08
+        });
+        document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+        const dayLabels = ['Present Simple intro', 'Pres. Simple form', 'Pres. Simple practice', 'Pres. Simple negatives', 'Pres. Simple review', 'Past Simple intro', 'Regular verbs', 'Irregular verbs pt.1', 'Irregular verbs pt.2', 'Past Simple review', 'Pres. Continuous intro', 'Pres. Continuous form', 'Simple vs Continuous', 'Pres. Continuous practice', 'Pres. Continuous review', 'Future will intro', 'Future will uses', 'Future will practice', 'Will vs Going to', 'Future review', 'Going to intro', 'Going to practice', 'Going to review', 'Past Continuous intro', 'Past Continuous form', 'Interrupted actions', 'Past Continuous review', 'Pres. Perfect intro', 'ever/never', 'just/already', 'since/for', 'Perfect vs Past Simple', 'Pres. Perfect practice', 'Pres. Perfect review', 'Pres. Perfect review 2', 'Pres. Perf. Continuous', 'Duration vs Result', 'Pres. Perf. Cont. practice', 'Phase 2 full review', 'Past Perfect intro', 'Past Perfect form', 'Past Perfect practice', 'Past Perfect review', 'Future Continuous intro', 'Future Continuous practice', 'Future Continuous review', 'Future Cont. review', 'Future Perfect intro', 'Future Perfect practice', 'Future Perfect review', 'Past Perf. Continuous', 'Future Perf. Continuous', 'Phase 3 review', 'Full review pt.1', 'Full review pt.2', 'Tenses comparison', 'Tenses comparison 2', 'All tenses test', 'All tenses test 2', 'Final practice', 'Final test'];
+        const stored = JSON.parse(localStorage.getItem('eng60v2') || '{}');
+
+        function buildGrid() {
+            const g = document.getElementById('days-grid');
+            g.innerHTML = '';
+            let done = 0;
+            for (let i = 1; i <= 60; i++) {
+                const d = document.createElement('div');
+                d.className = 'day-dot' + (stored[i] ? ' done' : '');
+                d.innerHTML = i + '<div class="dtip">' + (dayLabels[i - 1] || 'Day ' + i) + '</div>';
+                d.onclick = () => {
+                    stored[i] = !stored[i];
+                    localStorage.setItem('eng60v2', JSON.stringify(stored));
+                    buildGrid();
+                };
+                g.appendChild(d);
+                if (stored[i]) done++;
+            }
+            const pct = Math.round(done / 60 * 100);
+            document.getElementById('prog-done').textContent = done + ' day' + (done !== 1 ? 's' : '') + ' completed';
+            document.getElementById('prog-pct').textContent = pct + '%';
+            document.getElementById('pbar').style.width = pct + '%';
+        }
+        buildGrid();
+    </script>
+</body>
+
+</html>
